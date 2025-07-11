@@ -3,74 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>App publicaciones</title> 
     <style>
-        body {
-            background-color: #f0f0f0;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            justify-content: center;
-            padding: 50px;
-        }
-        h1 {
-            color: #333;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-        img {
-            margin-top: 20px;
-            max-width: 300px;
-            border: 2px solid #ddd;
-            border-radius: 5px;
-            transition: border-color 0.3s ease;
-        }
-        img:hover {
-            border-color: #ff0000;
-        }
+        
+        
+        
     </style>
 </head>
 <body>
-    <h1>Regalo para la wwa mayor🎁🎉🎉</h1>
-    <button>Abrir regalo</button>
+    <h2>Crear formulario</h2>
+    <form class="form-create">
+        <label for="publicacion">Contenido:</label>
+        <input type="text" name="publicacion" id="publicacion" required>
+        <input type="submit" value="publicar">
+    </form>
+    <div class="contenedor-publicaciones"> 
 
-    <script>
-        document.querySelector('button').addEventListener('click', function() {
-            if (!document.getElementById('regalo-img')) {
-                const img = document.createElement('img');
-                img.id = 'regalo-img';
-                img.src = 'https://static.vecteezy.com/system/resources/thumbnails/049/461/830/small/formula-1-race-car-on-a-wet-track-in-the-rain-with-blurred-background-photo.jpg';
-                img.alt = 'Regalo';
-                img.style.display = 'block';
-                img.style.margin = '20px auto 0 auto';
-                img.style.maxWidth = '300px';
-                document.body.appendChild(img);
+    </div>
 
-                // Crear botón para ocultar la imagen
-                const hideBtn = document.createElement('button');
-                hideBtn.textContent = 'Ocultar imagen';
-                hideBtn.id = 'hide-img-btn';
-                hideBtn.style.marginLeft = '10px';
-                document.body.appendChild(hideBtn);
-
-                hideBtn.addEventListener('click', function() {
-                    const img = document.getElementById('regalo-img');
-                    if (img) {
-                        img.remove();
-                    }
-                    hideBtn.remove();
-                });
-            }
-        });
-    </script>
+    <script src="main.js"></script>
 </body>
 </html>
